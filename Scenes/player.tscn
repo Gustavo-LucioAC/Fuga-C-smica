@@ -1,18 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://cff4i0u6od1tt"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_2dxd1"]
-[ext_resource type="Texture2D" uid="uid://sksbn46qr17m" path="res://Art Assets/Characters/Nave/nave.png" id="1_frb28"]
+[ext_resource type="Texture2D" uid="uid://bjj1pp44rf6yc" path="res://Art Assets/Characters/Nave/NaveRoxa.png" id="2_8hqlo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8m03k"]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mapea"]
+size = Vector2(16, 32)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2dxd1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_8m03k")
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_mapea")
+one_way_collision_margin = 0.0
+debug_color = Color(0.103449, 0.601665, 0.668381, 0.42)
 
-[node name="Nave" type="Sprite2D" parent="."]
-position = Vector2(1.90735e-06, -4.76837e-07)
-scale = Vector2(0.0356826, 0.0358093)
-texture = ExtResource("1_frb28")
+[node name="NaveRoxa" type="Sprite2D" parent="."]
+position = Vector2(5.68434e-14, 5.68434e-14)
+scale = Vector2(0.002825, 0.00278125)
+texture = ExtResource("2_8hqlo")

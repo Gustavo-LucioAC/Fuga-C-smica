@@ -1,11 +1,9 @@
 extends Node2D
 
 
-var speed = 1.2
-var velocity = Vector2()
+var enemy_scene = preload("res://Scenes/Asteroide.tscn")
 
-func _ready():
-	velocity = Vector2(-speed, 0)
-	
-func _process(delta):
-	translate(velocity)
+func _on_timer_timeout():
+	var enemy = enemy_scene.instantiate()
+	enemy.position  = Vector2(1175, randi_range(1000, 0))
+	add_child(enemy)

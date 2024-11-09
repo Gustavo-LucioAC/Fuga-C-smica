@@ -1,24 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl2ga4a7c2vxq"]
+[gd_scene load_steps=6 format=3 uid="uid://dl2ga4a7c2vxq"]
 
 [ext_resource type="Texture2D" uid="uid://cqxhbtmuntd6p" path="res://Art Assets/Background/Space.png" id="1_d1ghd"]
 [ext_resource type="Script" path="res://Scripts/space.gd" id="1_tx0qh"]
-[ext_resource type="PackedScene" uid="uid://cff4i0u6od1tt" path="res://Scenes/player.tscn" id="2_bvw4f"]
-[ext_resource type="PackedScene" uid="uid://ljfcnvwcvvaw" path="res://Scenes/Asteroide.tscn" id="3_7b4g2"]
+[ext_resource type="PackedScene" uid="uid://cff4i0u6od1tt" path="res://Scenes/Player.tscn" id="2_bvw4f"]
+[ext_resource type="Script" path="res://Scripts/space2.gd" id="2_lpiyn"]
+[ext_resource type="PackedScene" uid="uid://dwokk6qxe3frd" path="res://Scenes/PlayerTwo.tscn" id="5_c66j7"]
 
 [node name="Space" type="Node2D"]
 script = ExtResource("1_tx0qh")
 
 [node name="Space" type="TextureRect" parent="."]
-offset_left = 9.0
-offset_right = 2189.0
+offset_left = -9.0
+offset_right = 2171.0
 offset_bottom = 194.0
 scale = Vector2(2.12344, 3.35938)
 texture = ExtResource("1_d1ghd")
 stretch_mode = 1
-
-[node name="Ateroide" parent="Space" instance=ExtResource("3_7b4g2")]
-position = Vector2(385.224, 130.679)
+script = ExtResource("2_lpiyn")
 
 [node name="Player" parent="." instance=ExtResource("2_bvw4f")]
-position = Vector2(280, 459)
+position = Vector2(186, 235)
 scale = Vector2(4.24687, 6.71875)
+
+[node name="Player2" parent="." instance=ExtResource("5_c66j7")]
+position = Vector2(185, 306)
+scale = Vector2(4.24687, 6.71875)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
