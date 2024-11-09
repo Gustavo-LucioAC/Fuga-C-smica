@@ -35,7 +35,7 @@ Cenários ou backgrounds:
 ![background](https://github.com/user-attachments/assets/dbeda588-050d-48bd-a1db-c0edae9acaec)
 
 
-Elementos corelacionados:
+Elementos correlacionados:
 
 ![fuga_cosmica_jogo](https://github.com/user-attachments/assets/6a86282c-0e84-42ca-ac23-012c5f70749b)
 
