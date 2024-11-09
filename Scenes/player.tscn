@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cff4i0u6od1tt"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_2dxd1"]
+[ext_resource type="Texture2D" uid="uid://sksbn46qr17m" path="res://Art Assets/Characters/Nave/nave.png" id="1_frb28"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8m03k"]
+radius = 8.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_2dxd1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8m03k")
+
+[node name="Nave" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -4.76837e-07)
+scale = Vector2(0.0356826, 0.0358093)
+texture = ExtResource("1_frb28")

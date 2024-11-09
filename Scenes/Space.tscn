@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl2ga4a7c2vxq"]
+
+[ext_resource type="Texture2D" uid="uid://cqxhbtmuntd6p" path="res://Art Assets/Background/Space.png" id="1_d1ghd"]
+[ext_resource type="Script" path="res://Scripts/space.gd" id="1_tx0qh"]
+[ext_resource type="PackedScene" uid="uid://cff4i0u6od1tt" path="res://Scenes/player.tscn" id="2_bvw4f"]
+[ext_resource type="PackedScene" uid="uid://ljfcnvwcvvaw" path="res://Scenes/Asteroide.tscn" id="3_7b4g2"]
+
+[node name="Space" type="Node2D"]
+script = ExtResource("1_tx0qh")
+
+[node name="Space" type="TextureRect" parent="."]
+offset_left = 9.0
+offset_right = 2189.0
+offset_bottom = 194.0
+scale = Vector2(2.12344, 3.35938)
+texture = ExtResource("1_d1ghd")
+stretch_mode = 1
+
+[node name="Ateroide" parent="Space" instance=ExtResource("3_7b4g2")]
+position = Vector2(385.224, 130.679)
+
+[node name="Player" parent="." instance=ExtResource("2_bvw4f")]
+position = Vector2(280, 459)
+scale = Vector2(4.24687, 6.71875)

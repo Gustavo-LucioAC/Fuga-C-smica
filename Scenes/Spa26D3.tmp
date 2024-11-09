@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl2ga4a7c2vxq"]
+
+[ext_resource type="Texture2D" uid="uid://cqxhbtmuntd6p" path="res://Art Assets/Background/Space.png" id="1_d1ghd"]
+[ext_resource type="PackedScene" uid="uid://cff4i0u6od1tt" path="res://Scenes/player.tscn" id="2_bvw4f"]
+[ext_resource type="PackedScene" uid="uid://ljfcnvwcvvaw" path="res://Scenes/Asteroide.tscn" id="3_7b4g2"]
+
+[sub_resource type="GDScript" id="GDScript_ulv2w"]
+script/source = "
+	
+"
+
+[node name="Space" type="Node2D"]
+
+[node name="Space" type="TextureRect" parent="."]
+offset_left = 6.0
+offset_top = -2.0
+offset_right = 2186.0
+offset_bottom = 190.0
+scale = Vector2(2.12344, 3.35938)
+texture = ExtResource("1_d1ghd")
+stretch_mode = 1
+
+[node name="Ateroide" parent="Space" instance=ExtResource("3_7b4g2")]
+position = Vector2(400.294, 35.4233)
+script = SubResource("GDScript_ulv2w")
+
+[node name="Ateroide2" parent="Space" instance=ExtResource("3_7b4g2")]
+position = Vector2(586.784, 96.744)
+script = SubResource("GDScript_ulv2w")
+
+[node name="Ateroide3" parent="Space" instance=ExtResource("3_7b4g2")]
+position = Vector2(499.19, 158.66)
+script = SubResource("GDScript_ulv2w")
+
+[node name="Ateroide4" parent="Space" instance=ExtResource("3_7b4g2")]
+position = Vector2(800.588, 107.46)
+script = SubResource("GDScript_ulv2w")
+
+[node name="Ateroide5" parent="Space" instance=ExtResource("3_7b4g2")]
+position = Vector2(681.912, 164.316)
+script = SubResource("GDScript_ulv2w")
+
+[node name="Ateroide6" parent="Space" instance=ExtResource("3_7b4g2")]
+position = Vector2(676.732, 35.4232)
+script = SubResource("GDScript_ulv2w")
+
+[node name="Player" parent="." instance=ExtResource("2_bvw4f")]
+position = Vector2(280, 459)
+scale = Vector2(4.24687, 6.71875)

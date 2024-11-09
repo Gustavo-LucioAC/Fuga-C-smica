@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Spider-Game"
+run/main_scene="res://Scenes/Space.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[importer_defaults]
+
+import_gif_to_sprite_frames={
+"frames_per_second": 60
+}
 
 [rendering]
 
